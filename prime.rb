@@ -1,11 +1,13 @@
 # Add  code here!
 def prime?(num)
 
- 2.upto(Math.sqrt(num)) do |x|
-   if n % x == 0
+ if num < 2
+   return false
+ elsif (2..num).each do |x|
+   if num % x == 0
      return false
-   else
-     return true
    end
  end
-end
+ end
+ true
+ end
